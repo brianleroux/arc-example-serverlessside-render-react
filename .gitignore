@@ -1,0 +1,4 @@
+.cache/
+.static/
+node_modules/
+src/shared/views/

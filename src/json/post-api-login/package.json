@@ -1,0 +1,6 @@
+{
+  "name": "parcel-arc-post-api-login",
+  "dependencies": {
+    "@architect/functions": "^1.6.3"
+  }
+}

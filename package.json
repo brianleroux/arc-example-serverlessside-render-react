@@ -1,0 +1,28 @@
+{
+  "name": "test-parcel",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "create": "AWS_PROFILE=smallwins AWS_REGION=us-east-2 arc-create",
+    "deploy": "AWS_PROFILE=smallwins AWS_REGION=us-east-2 arc-deploy",
+    "build": "parcel build src/views/index.html --public-url https://s3.us-east-2.amazonaws.com/parcel-test-staging --out-dir .static",
+    "bundle": "npm run build && rm -rf src/shared/views && mkdir src/shared/views && mv .static/index.html src/shared/views/index.html && rollup -c --f cjs"
+  },
+  "keywords": [],
+  "author": "Brian LeRoux <b@brian.io>",
+  "license": "Apache-2.0",
+  "devDependencies": {
+    "@architect/workflows": "^2.2.2",
+    "babel-cli": "^6.26.0",
+    "babel-preset-env": "^1.6.1",
+    "babel-preset-react": "^6.24.1",
+    "parcel-bundler": "^1.6.1",
+    "react": "^16.2.0",
+    "react-dom": "^16.2.0",
+    "rollup": "^0.56.1",
+    "rollup-plugin-babel": "^3.0.3",
+    "rollup-plugin-commonjs": "^8.3.0",
+    "rollup-plugin-node-resolve": "^3.0.3"
+  }
+}

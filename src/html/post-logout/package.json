@@ -1,0 +1,6 @@
+{
+  "name": "parcel-arc-post-logout",
+  "dependencies": {
+    "@architect/functions": "^1.6.3"
+  }
+}
